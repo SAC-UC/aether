@@ -1,2 +1,6 @@
 Jose Marcelino
+<<<<<<< HEAD
+=======
+Joao Jordao - estava a ver que nao conseguia funcionar com isto
 bruno conceição das bolachas dancake
+>>>>>>> origin/master
