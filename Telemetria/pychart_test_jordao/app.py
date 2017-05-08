@@ -6,10 +6,20 @@ app = Flask(__name__)
  
 @app.route("/")
 def chart():
-	a = open('sensor_1', 'w')
-    labels = ["January","February","March","April","May","June","July","August"]
-    values = [10,9,8,7,6,4,7,8]
-    return render_template('chart.html', values=values, labels=labels)
+	temp_file = open('temp.txt', 'r')
+	time_file = open('time.txt', 'r')
+	temp = []
+	time = []
+	for line_1 in temp_file:
+		temp = line_1.split()
+
+	for line_2 in time_file:
+		time = line_2.split()
+
+	temp_file.close()
+	time_file.close()
+
+	return render_template('chart.html', values=temp, labels=time)
  
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5001)
+	app.run(host='0.0.0.0', port=5001)
