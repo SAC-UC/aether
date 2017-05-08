@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="utf-8" />
-   <title>Teste de gráfico </title>
+   <title>Altitude</title>
  
    <!-- import plugin script -->
    <script src='static/Chart.min.js'></script>
@@ -11,7 +11,7 @@
 <body style='background-color: white; '>
  
 <h1 style='color: black; font-family: Courier New; font-size: 50px; text-align: center;'>
-  Temperatura e Tempo
+  Altitude
 </h1>
 
 <!-- buttons -->
@@ -23,6 +23,9 @@
  <ul>
 <a class="btn btn-default" href="homepage.html" role="button" style='font-family: Courier New'>
   Homepage
+</a>
+<a class="btn btn-default" href="temperature.html" role="button" style='font-family: Courier New'>
+  Temperature
 </a>
 </ul>
 
@@ -65,7 +68,7 @@
    var mychart = document.getElementById("chart").getContext("2d");
  
    steps = 10
-   max = 273
+   max = 25
    // draw bar chart
    var LineChartDemo = new Chart(mychart).Line(barData, {
         scaleOverride: true,
