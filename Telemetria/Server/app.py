@@ -42,6 +42,17 @@ def alt():
 	time_file.close()
 
 	return render_template('altitude.html', values=alt, labels=time)
- 
+
+# @app.route("/alt.txt")
+# def alt_data():
+# 	alt_file = open('alt.txt', 'r')
+# 	alt = []
+# 	for line_1 in alt_file:
+# 		alt = line_1.split()
+# 	alt_file.close()
+
+# 	return alt	
+
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=5001)

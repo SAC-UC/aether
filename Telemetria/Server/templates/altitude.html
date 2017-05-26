@@ -14,6 +14,27 @@
   Altitude
 </h1>
 
+<!--AJAX-->
+<div id="alt_data">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<!--AJAX script-->
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("alt-data").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", 'alt.txt', true);
+  xhttp.send();
+}
+</script>
+
+
 <!-- buttons -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
